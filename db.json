@@ -1,0 +1,149 @@
+{
+  "enquirylist": [
+    {
+      "firstName": "sandip",
+      "LastName": "vethekar",
+      "email": "vethekarsandip23@gmail.com",
+      "mobile": "9767057268",
+      "weight": 61,
+      "height": 174,
+      "bmi": 20,
+      "bmiresult": "Normal",
+      "gender": "Male",
+      "requiretrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and Endurance"
+      ],
+      "havegymbefore": "Yes",
+      "inquiryDate": "2023-07-31T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "firstName": "Gopikisan",
+      "LastName": "pund",
+      "email": "gopikisanpund2017@gmail.com",
+      "mobile": "9511634468",
+      "weight": 76,
+      "height": 176,
+      "bmi": 24,
+      "bmiresult": "Normal",
+      "gender": "Male",
+      "requiretrainer": "Yes",
+      "package": "Monthly",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and Endurance",
+        "Building Lean Muscle",
+        "Healthier Digestive System",
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "havegymbefore": "No",
+      "inquiryDate": "2023-07-30T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "firstName": "Rushikesh",
+      "LastName": "Lodhe",
+      "email": "lodhe24@gmail.com",
+      "mobile": "9675453212",
+      "weight": 69,
+      "height": 165,
+      "bmi": 25,
+      "bmiresult": "overweight",
+      "gender": "Male",
+      "requiretrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Toxic Fat reduction"
+      ],
+      "havegymbefore": "No",
+      "inquiryDate": "2023-09-03T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "Vaibhav",
+      "LastName": "Karale",
+      "email": "karale711@gmail.com",
+      "mobile": "8876876543",
+      "weight": 74,
+      "height": 170,
+      "bmi": 24,
+      "bmiresult": "Normal",
+      "gender": "Male",
+      "requiretrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Sugar Craving Body"
+      ],
+      "havegymbefore": "No",
+      "inquiryDate": "2023-07-27T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "firstName": "Kiran",
+      "LastName": "Pagire(BCS)",
+      "email": "kiran11@gmail.com",
+      "mobile": "9654352345",
+      "weight": 70,
+      "height": 166,
+      "bmi": 25,
+      "bmiresult": "overweight",
+      "gender": "Male",
+      "requiretrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "havegymbefore": "No",
+      "inquiryDate": "2023-07-21T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "firstName": "Pushpa",
+      "LastName": "Giakwad",
+      "email": "pushpa96@gmail.com",
+      "mobile": "9299223234",
+      "weight": 58,
+      "height": 167,
+      "bmi": 20,
+      "bmiresult": "Normal",
+      "gender": "Female",
+      "requiretrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Building Lean Muscle",
+        "Healthier Digestive System",
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "havegymbefore": "Yes",
+      "inquiryDate": "2023-07-26T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "firstName": "vaishnavi",
+      "LastName": "jadhav",
+      "email": "jadhav@gmail.com",
+      "mobile": "9876565645",
+      "weight": 57,
+      "height": 167,
+      "bmi": 20,
+      "bmiresult": "Normal",
+      "gender": "Female",
+      "requiretrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Healthier Digestive System",
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "havegymbefore": "Yes",
+      "inquiryDate": "2023-07-21T18:30:00.000Z",
+      "id": 9
+    }
+  ]
+}

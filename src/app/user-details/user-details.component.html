@@ -1,0 +1,66 @@
+<mat-card class="example-card mt-5">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+
+        <mat-card-title>{{UserDetails.firstName}} {{UserDetails.LastName}}</mat-card-title>
+        <mat-card-subtitle>{{UserDetails.email}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>
+                <div matLine>
+                    Mobile Number:
+                    <button mat-button>{{UserDetails.mobile}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    Gender:
+                    <button mat-button>{{UserDetails.gender}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    package:
+                    <button mat-button>{{UserDetails.package}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    BMI:
+                    <button mat-button>{{UserDetails.bmi}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    Bmi Result:
+                    <button mat-button>{{UserDetails.bmiresult}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    Trainer Require:
+                    <button mat-button>{{UserDetails.requiretrainer}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    Enquiry Date:
+                    <button mat-button>{{UserDetails.inquiryDate}}</button>
+                </div>
+            </mat-list-item>
+
+        </mat-list>
+        <mat-chip-listbox *ngFor="let row of UserDetails.important ">
+            <mat-chip-option selected>
+                {{row}}
+            </mat-chip-option>
+
+        </mat-chip-listbox>
+        <button class="backregistration" routerLink="/registerlist" mat-raised-button color="accent">
+            <mat-icon>skip_previous</mat-icon>Back To RegistraionList
+        </button>
+    </mat-card-content>
+
+</mat-card>

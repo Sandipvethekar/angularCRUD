@@ -1,0 +1,181 @@
+<div class="logo text-center ">
+    <img src="assets/filogo.jpg" alt="Fitness " width="200">
+</div>
+<div class="registration-form m-3" *ngIf="registrationForm">
+    <form [formGroup]="registrationForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input formControlName="firstName" matInput placeholder="First Name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="registrationForm.controls['firstName'].status === 'INVALID'">firstName is
+                        required</mat-error>
+
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input formControlName="LastName" matInput placeholder="Last Name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="registrationForm.controls['LastName'].status === 'INVALID'">This field is
+                        required</mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="Email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="registrationForm.controls['email'].status === 'INVALID'">This field is
+                        required</mat-error>
+
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile</mat-label>
+                    <input formControlName="mobile" matInput placeholder="Mobile">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="registrationForm.controls['mobile'].status === 'INVALID'">This field is
+                        required</mat-error>
+
+                    <div *ngIf="registrationForm.get('mobile')?.errors?.['pattern']">Mobile number is not 10
+                        digits</div>
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Weight</mat-label>
+                    <input type="number" formControlName="weight" matInput formControlName="weight"
+                        placeholder="weight">
+                    <mat-icon matSuffix>line_weight</mat-icon>
+                    <mat-hint>Unit is KGs</mat-hint>
+                    <mat-error
+                        *ngIf="registrationForm.controls['weight'].status === 'INVALID' && registrationForm.get('weight')?.errors?.['twoDigits']">Please
+                        enter exactly two digits
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Height</mat-label>
+                    <input type="number" [readonly]="!this.registrationForm.value?.weight" formControlName="height"
+                        matInput formControlName="height" placeholder="Height">
+                    <mat-icon matSuffix><i class="fa fa-text-height"></i></mat-icon>
+                    <mat-hint>Unit is meters</mat-hint>
+                    <mat-error
+                        *ngIf="registrationForm.controls['height'].status === 'INVALID' && registrationForm.get('height')?.errors?.['threeDigits']">Please
+                        enter exactly three digits
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>BMI </mat-label>
+                    <input type="number" readonly matInput formControlName="bmi" placeholder="BMI ">
+                    <mat-icon matSuffix><i class="fa fa-sort-numeric-desc"></i></mat-icon>
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>BMI Result </mat-label>
+                    <input readonly matInput formControlName="bmiresult" placeholder="bmi result ">
+                    <mat-icon matSuffix><i class="fa fa-check"></i></mat-icon>
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label id="example-radio-group-label">Do you require trainer?</label>
+                <mat-radio-group formControlName="requiretrainer" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let traineropt of ['Yes','No']"
+                        [value]="traineropt">
+                        {{traineropt}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <mat-error
+                    *ngIf="registrationForm.get('requiretrainer')!.invalid && registrationForm.get('requiretrainer')!.touched">
+                    Please select a requiretrainer.
+                </mat-error>
+                <div>Selected option is: {{ registrationForm.get('requiretrainer')?.value }}</div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label id="example-radio-group-label">Gender</label>
+                <mat-radio-group formControlName="gender" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
+                        {{gender}}
+                    </mat-radio-button>
+                    <mat-error
+                        *ngIf="registrationForm.get('gender')!.invalid && registrationForm.get('gender')!.touched">
+                        Please select a gender.
+                    </mat-error>
+                </mat-radio-group>
+                <div>Selected option is: {{ registrationForm.get('gender')?.value }}</div>
+            </div>
+            <div class="col-md-6  mt-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Select pakages</mat-label>
+                    <mat-select formControlName="package">
+                        <mat-option *ngFor="let  package of  packages" [value]=" package">
+                            {{ package}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['package'].status === 'INVALID'">This field is
+                        required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Select pakages</mat-label>
+                    <mat-select multiple formControlName="important">
+                        <mat-option *ngFor="let  important of  importants" [value]=" important">
+                            {{ important}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['important'].status === 'INVALID'">This field is
+                        required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-2">
+                <label id="example-radio-group-label">Have been gym befor ?</label>
+                <mat-radio-group formControlName="havegymbefore" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let beengym  of['Yes','No']"
+                        [value]="beengym">
+                        {{beengym}}
+                    </mat-radio-button>
+                    <mat-error
+                        *ngIf="registrationForm.get('havegymbefore')!.invalid && registrationForm.get('havegymbefore')!.touched">
+                        Please select a havegymbefore.
+                    </mat-error>
+                </mat-radio-group>
+                <div>Selected option is: {{ registrationForm.get('havegymbefore')?.value }}</div>
+            </div>
+            <div class="col-md-6 mt-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enquiry date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="inquiryDate">
+                    <mat-hint>MM/DDYYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error
+                        *ngIf="registrationForm.get('inquiryDate')?.invalid && registrationForm.get('inquiryDate')?.touched ">
+                        Date of Birth is required
+                    </mat-error>
+                </mat-form-field>
+
+            </div>
+
+        </div>
+        <button *ngIf="!isupdateactive" (click)="submit()" class="mt-4" mat-raised-button color="accent"
+            [disabled]="registrationForm.invalid">Submit</button>
+        <button *ngIf="isupdateactive" (click)="update()" class="mt-4" mat-raised-button color="accent">Update</button>
+    </form>
+</div>
